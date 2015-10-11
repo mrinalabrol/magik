@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/skel-layers.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/init.js') }}"></script>
+		<!-- <noscript> -->
+			<link rel="stylesheet" href="{{ url_for('static', filename='styles/skel.css') }}" />
+			<link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+			<link rel="stylesheet" href="{{ url_for('static', filename='styles/style-xlarge.css') }}" />
+		<!-- </noscript> -->
+</head>
+<body>
+	<br />
+		<div class="container">
+		<h1 style="font-size:50px"><strong>Sign Up</strong></strong></h1>
+
+			<div class="login">
+			<form method="post" action="">
+					<input type="text" placeholder="Name" name="name"><br>
+					<input type="text" placeholder="Username" name="username"><br>
+					<input type="password" placeholder="Password" name="password"><br>
+
+					<input type="email" placeholder="Email" name="email"><br>
+					<input type="text" placeholder="Rollno" name="roll_no"><br>
+					<input type="text" placeholder="Elective" name="elective"><br>
+
+
+					<input type="submit" value="Sign Up">
+
+			</form>
+			</div>
+		</div>
+		<br />
+		<footer id="footer">
+			<div class="container"></div>
+		</footer>
+
+</body>
+</html>

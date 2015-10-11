@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Planner</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/skel-layers.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/init.js') }}"></script>
+		<!-- <noscript> -->
+			<link rel="stylesheet" href="{{ url_for('static', filename='styles/skel.css') }}" />
+			<link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+			<link rel="stylesheet" href="{{ url_for('static', filename='styles/style-xlarge.css') }}" />
+		<!-- </noscript> -->
+		<style>
+		.first{
+
+			width: 20px;
+			height: 20px;
+		}
+		</style>
+
+	</head>
+	<body>
+		<header id="header" class="skels-layers-fixed">
+				<nav id="nav">
+					<ul>
+					<li>{{ USER }} | {{ ROLL }}</li>
+					<li><a href="/logout">Logout</a></li>
+					</ul>
+				</nav>
+			</header>
+	<section>
+					<div class="box alt">
+						<h1> THIS WEEK </h1>
+						<div class="row 50% uniform">
+						{% if week == 9 %}
+						<div class="12u$" id="first"><span class="image fit"><img src="{{ url_for('static', filename='images/week9.jpg') }}" alt="" style="height:300px; width:700px" /></span></div>
+						{% elif week == 10 %}
+						<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/week10.JPG') }}" alt="" style="height:300px; width:700px"/></span></div>
+						{% elif week == 11 %}
+						<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/week11.JPG') }}" alt="" style="height:300px; width:700px"/></span></div>
+						{% elif week == 12 %}
+						<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/week12.JPG') }}" alt="" style="height:300px; width:700px"/></span></div>
+						{% elif week == 13 %}
+						<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/week13.JPG') }}" alt="" style="height:300px; width:700px"/></span></div>
+						{% elif week == 15 %}
+						<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/week14.JPG') }}" alt="" style="height:300px; width:700px"/></span></div>
+						{% elif week == 16 %}
+						<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/week15.JPG') }}" alt="" style="height:300px; width:700px"/></span></div>
+						{% elif week == 17 %}
+						<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/week16.jpg') }}" alt="" style="height:300px; width:700px"/></span></div>
+						{% elif week == 18 %}
+						<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/week17-18.jpg') }}" alt="" style="height:300px; width:700px"/></span></div>
+						{% elif week == 19 %}
+						<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/week19.JPG') }}" alt="" style="height:300px; width:700px"/></span></div>
+						{% endif %}
+						</div>
+					</div>
+	</section>
+		<section>
+			<div>
+			<h1>TODAY'S TIME TABLE, MESS MENU</h1>			
+			{% if day == "Mon" %}
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/time.png') }}" alt="" style="height:50px; width:100%"/></span></div>
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/monday.png') }}" alt="" style="height:200px; width:100%"/></span></div>
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/monday.JPG') }}" alt="" style="height:800px; width:200px"/></span></div>
+			{% elif day == "Tue" %}
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/time.png') }}" alt="" style="height:50px; width:100%"/></span></div>
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/tues.png') }}" alt="" style="height:200px; width:100%"/></span></div>
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/tuesday.JPG') }}" alt="" style="height:800px; width:200px"/></span></div>
+			{% elif day == "Wed" %}
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/time.png') }}" alt="" style="height:50px; width:100%"/></span></div>
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/wed.png') }}" alt="" style="height:200px; width:100%"/></span></div>
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/wednesday.JPG') }}" alt="" style="height:800px; width:200px"/></span></div>
+			{% elif day == "Thu" %}
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/time.png') }}" alt="" style="height:50px; width:100%"/></span></div>
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/thur.png') }}" alt="" style="height:200px; width:100%"/></span></div>
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/thursday.JPG') }}" alt="" style="height:800px; width:200px"/></span></div>
+			{% elif day == "Fri" %}
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/time.png') }}" alt="" style="height:50px; width:100%"/></span></div>
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/frid.png') }}" alt="" style="height:200px; width:100%"/></span></div>
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/friday.JPG') }}" alt="" style="height:800px; width:200px"/></span></div>
+			{% elif day == "Sat" %}
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/days-off.jpg') }}" alt="" style="height:400px; width:400px"/></span></div>
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/saturday.JPG') }}" alt="" style="height:800px; width:200px"/></span></div>
+			{% else %}
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/days-off.jpg') }}" alt="" style="height:400px; width:400px"/></span></div>
+			<div class="12u$"><span class="image fit"><img src="{{ url_for('static', filename='images/sunday.JPG') }}" alt="" style="height:800px; width:200px"/></span></div>
+			{% endif %}
+			</div>
+	</section>
+	<footer id="footer">
+				<div class="container">
+				</div>
+			</footer>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<script src="{{ url_for('static', filename='../js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='../js/skel.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='../js/skel-layers.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='../js/init.js') }}"></script>
+		<noscript>
+			<link rel="stylesheet" href="{{ url_for('static', filename='../css/skel.css') }}" />
+			<link rel="stylesheet" href="{{ url_for('static', filename='../css/style.css') }}" />
+			<link rel="stylesheet" href="{{ url_for('static', filename='../css/style-xlarge.css') }}" />
+		</noscript>
